@@ -14,25 +14,24 @@ public class Main {
 
 
 		for (int i = 0; i < objects.length; i++) {
-			System.out.println("Do " + objects[i].getClass().getSimpleName());
+			System.out.println("Выполняет " + objects[i].getClass().getSimpleName());
 			for (int j = 0; j < events.length; j++) {
-				System.out.println("Met " + events[j].getClass().getSimpleName());
+				System.out.println("Пробует " + events[j].getClass().getSimpleName());
 				if (events[j] instanceof Wall) {
 					if (((Human) objects[i]).jump(((Wall) events[j]).wallHeight)) {
 						System.out.println("Смог");
 					} else {
 						System.out.println("Не Смог");
-					} else {
-						if (events[j] instanceof Track) {
-							if (((Human) objects[i]).jump(((Track) events[j]).trackLength)) {
-								System.out.println("Смог");
-							} else {
-								System.out.println("Не Смог");
-							}
-						}
 					}
+				} else {
+					if (((Human) objects[i]).run(((Track) events[j]).trackLength)) {
+						System.out.println("Смог");
+					} else {
+						System.out.println("Не Смог"); }
 				}
 			}
 		}
 	}
 }
+
+
