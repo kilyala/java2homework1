@@ -1,18 +1,22 @@
 package ru.geekbrains.javaLevel2;
 
 public class Human implements Runnable, Jumpable {
-    public Human(String name, int runLength, int jumpHeight) {
-        System.out.println(name + " Running " + runLength + " Jumping " + jumpHeight);
+    public int maxLength;
+    public int maxHeight;
+
+    public Human(int maxLength, int maxHeight) {
+        this.maxLength=maxLength;
+        this.maxHeight=maxHeight;
+        System.out.println(" Running " + maxLength + " Jumping " + maxHeight);
     }
 
-//    @Override
-//    public void jump() {
-//        System.out.println("Human jump");
-//
-//    }
-//
-//    @Override
-//    public void run() {
-//        System.out.println("Human run");
-//    }
+    @Override
+    public boolean runLength(int trackLength) {
+        return this.maxLength >= trackLength;
+    }
+
+    @Override
+    public boolean jumpHeight(int wallHeight) {
+        return this.maxHeight >= wallHeight;
+    }
 }

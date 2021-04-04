@@ -1,19 +1,22 @@
 package ru.geekbrains.javaLevel2;
 
-public class Cat implements Runnable, Jumpable{
-    public Cat(String name, int runLength, int jumpHeight) {
-        System.out.println(name + " Running " + runLength + " Jumping " + jumpHeight);
+public class Cat implements Runnable, Jumpable {
+    public int maxLength;
+    public int maxHeight;
+
+    public Cat(int maxLength, int maxHeight) {
+        this.maxLength=maxLength;
+        this.maxHeight=maxHeight;
+        System.out.println(" Running " + maxLength + " Jumping " + maxHeight);
     }
 
-//    @Override
-//    public void jump() {
-//        System.out.println("Cat jump");
-//
-//    }
-//
-//    @Override
-//    public void run() {
-//        System.out.println("Cat run");
-//
-//    }
+    @Override
+    public boolean runLength(int trackLength) {
+        return this.maxLength >= trackLength;
+    }
+
+    @Override
+    public boolean jumpHeight(int wallHeight) {
+        return this.maxHeight >= wallHeight;
+    }
 }
