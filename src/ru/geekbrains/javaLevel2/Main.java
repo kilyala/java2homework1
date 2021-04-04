@@ -17,10 +17,11 @@ public class Main {
 			for (int j = 0; j < events.length; j++) {
 				System.out.println("Met " + events[j].getClass().getSimpleName());
 				if (events instanceof Wall) {
-					objects.runLength
+					((Jumpable) objects).jumpHeight();
+
+
 				}
 			}
-
 		}
     }
 }
