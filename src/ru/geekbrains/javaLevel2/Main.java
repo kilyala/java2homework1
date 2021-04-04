@@ -18,26 +18,20 @@ public class Main {
 			System.out.println("Do " + objects[i].getClass().getSimpleName());
 			for (int j = 0; j < events.length; j++) {
 				System.out.println("Met " + events[j].getClass().getSimpleName());
-				if(human.run(human.runDistance)) {
-					System.out.println("Pass");
-				} else {
-					System.out.println("Fail");
+				if instanceof Wall {
+					(((Human)objects[i]).jump (((Wall)events[j]).wallHeight)){
+						System.out.println("Смог");
+					} else {
+						System.out.println("Не Смог");
+					} else {
+						(((Human)objects[i]).jump (((Track)events[j]).trackLength)){
+							System.out.println("Смог");
+						} else {
+							System.out.println("Не Смог");
+						}
+					}
 				}
-
-//				if(((Human)objects[i]).jumpHeight(((Wall)events[j]).wallHeight)){
-//					System.out.println("Смог");
-//				} else {
-//					System.out.println("Не Смог");
-//				}
 			}
 		}
     }
-
 }
-
-
-//
-//if (participants instanceof Runnable) ((Runnable) participants).runLength;
-//		if (participants instanceof Jumpable) {
-//		((Jumpable) participants).jumpHeight();
-//		}

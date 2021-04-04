@@ -1,11 +1,12 @@
 package ru.geekbrains.javaLevel2;
 
 public class Cat implements Runnable, Jumpable {
-    private String name;
+    public String name;
     public int runDistance;
     public int jumpHeight;
 
     public Cat(String name, int runDistance, int jumpHeight) {
+        this.name = name;
         this.runDistance=runDistance;
         this.jumpHeight = jumpHeight;
         System.out.println(name + " Run " + runDistance + " Jump " + jumpHeight);
@@ -15,7 +16,6 @@ public class Cat implements Runnable, Jumpable {
     public boolean run(int trackLength) {
         return this.runDistance >= trackLength;
     }
-
 
     @Override
     public boolean jump(int wallHeight) {
