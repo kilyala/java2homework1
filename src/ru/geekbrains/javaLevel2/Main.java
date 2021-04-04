@@ -22,11 +22,6 @@ public class Main {
 			}
 
 		}
-
-//	for (Object participants : objects) {
-//		if objects[].runLength()
-//
-//		}
     }
 }
 
